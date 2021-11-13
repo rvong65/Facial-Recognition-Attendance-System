@@ -1,0 +1,188 @@
+*{
+    margin: 0; 
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+
+body{
+    background: linear-gradient(to right, rgb(0, 81, 255), aqua );
+}
+
+
+nav{
+    display: flex;
+    padding: 0% 5%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    top: 14px;
+    width: 200px;
+}
+
+.links{
+    flex: 1;
+    text-align: right;
+}
+.links ul li{
+    display: inline-block;
+    padding: 6px 12px;
+    position: relative;
+}
+.links ul li a{
+    color: white;
+    font-size: 23px;
+    text-decoration: none;
+
+}
+/* After clicking the link */
+.links ul li::after{
+    content: '';
+    width: 0%; 
+    height: 2px; 
+    background: navy;
+    display: block;
+    margin: auto;
+    transition: 0.2s;
+}
+.links ul li:hover::after{
+    width: 100%; 
+}
+
+.uploadFile{
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+
+.centerBox{
+    width: 100%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.centerBox h1{
+    font-size: 58px;
+    color: white;
+}
+.centerBox p{
+    margin: 10px  40px;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+}
+
+.folderTextBox h4{
+    color:rgb(255, 255, 255); 
+    font-size: 18px;
+}
+
+.folderTextBox{
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    width: 500px; 
+  
+
+}
+
+.fileTextBox{
+    position: fixed;
+    top: 400px;
+    left: 100px;
+    width: 500px; 
+  
+}
+.fileTextBox h4{
+    color: white;
+    font-size: 18px;
+}
+
+.webcam h3{
+    color: white;
+    font-size: 18px; 
+    text-decoration: underline; 
+}
+
+.webcam{
+    position: absolute;
+    width: 1000px; 
+    height: 500px;
+    top: 10px;
+    left: 700px;
+    text-align: center;
+}
+.getStartedBtn{
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid rgba(0, 247, 132, 0.842);
+    padding: 12px 32px;
+    font-size: 14px;
+    position: relative;
+    cursor: pointer;
+    color: white;
+}
+
+.getStartedBtn:hover{
+    border: 1px solid rgba(0, 247, 132, 0.842); 
+    background: rgba(0, 247, 132, 0.842);
+    transition: 0.5s;}
+
+@media(max-width: 400px){
+    .centerBox h1{
+        font-size: 30px;
+    }
+}
+
+.fileTextBox a{
+    background-color: rgb(65, 163, 0);
+    color: white; 
+    padding: 7px 17px; 
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+.fileTextBox a:hover, a:active{
+    background-color: rgb(18, 161, 94);
+}
+
+.step1 {
+    background-color: #011f4b;
+}
+.step1 h2{
+    color: rgb(213, 243, 254);
+    text-decoration: underline;
+}
+.step1 p{
+    color: white;
+}
+.step2{
+    background-color:#03396c;
+}
+.step2 p{
+    color: white;
+}
+.step2 h2{
+    color: rgb(213, 243, 254);
+    text-decoration: underline;
+    
+}
+
+.step3{
+    background-color: #005b96;
+}
+
+.step3 h2{
+    color: rgb(213, 243, 254);
+    text-decoration: underline;
+}
+.step3 p{
+    color: white;
+}
