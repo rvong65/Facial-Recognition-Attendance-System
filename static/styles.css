@@ -1,36 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
 *{
-    margin: 0; 
-    padding: 0;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Orbitron', sans-serif;
 }
-
-
-
 body{
-    background: linear-gradient(to right, rgb(0, 81, 255), aqua );
+    background: linear-gradient(to right, #054092, #202060);
 }
 
-
+ion-icon {
+    font-size: 64px;
+  }
 nav{
     display: flex;
-    padding: 0% 5%;
+    padding: 0% 2%;
     justify-content: space-between;
-    align-items: center;
+    margin-top: 1%;
 }
 
 nav img{
-    top: 14px;
+    margin-top: 1%;
     width: 200px;
 }
 
 .links{
+    margin-top: 0;
     flex: 1;
     text-align: right;
+    
 }
 .links ul li{
     display: inline-block;
     padding: 6px 12px;
     position: relative;
+    font-size: 12px;
 }
 .links ul li a{
     color: white;
@@ -78,27 +80,33 @@ nav img{
     color: rgb(255, 255, 255);
 }
 
+.drop_zone{
+    border-style: dashed; 
+    border-radius: 15px;
+    border-color: white;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+}
+
+.uploadfilesLabel{
+    cursor: pointer;
+    padding: 5px;
+    background: rgb(65, 163, 0);
+    border-radius: 10px;
+    color: white;
+}
+
+.uploadfilesLabel:hover{
+    background-color: rgb(18, 161, 94);
+}
+
 .folderTextBox h4{
     color:rgb(255, 255, 255); 
     font-size: 18px;
 }
 
-.folderTextBox{
-    position: fixed;
-    top: 100px;
-    left: 100px;
-    width: 500px; 
-  
-
-}
-
-.fileTextBox{
-    position: fixed;
-    top: 400px;
-    left: 100px;
-    width: 500px; 
-  
-}
 .fileTextBox h4{
     color: white;
     font-size: 18px;
@@ -111,26 +119,25 @@ nav img{
 }
 
 .webcam{
-    position: absolute;
-    width: 1000px; 
-    height: 500px;
-    top: 10px;
-    left: 700px;
     text-align: center;
 }
+
 .getStartedBtn{
     display: inline-block;
     text-decoration: none;
-    border: 1px solid rgba(0, 247, 132, 0.842);
+    background: rgba(0, 247, 132, 0.842);
     padding: 12px 32px;
     font-size: 14px;
     position: relative;
     cursor: pointer;
     color: white;
+    font-weight: bold;
+    border-radius: 15px;
 }
 
 .getStartedBtn:hover{
-    border: 1px solid rgba(0, 247, 132, 0.842); 
+    color: white;
+    border: 1px solid black; 
     background: rgba(0, 247, 132, 0.842);
     transition: 0.5s;}
 
@@ -140,6 +147,7 @@ nav img{
     }
 }
 
+
 .fileTextBox a{
     background-color: rgb(65, 163, 0);
     color: white; 
@@ -147,10 +155,13 @@ nav img{
     text-align: center; 
     text-decoration: none;
     display: inline-block;
+    
 }
 
 .fileTextBox a:hover, a:active{
-    background-color: rgb(18, 161, 94);
+    color: white;
+    border: 1px solid black; 
+    transition: 0.5s;
 }
 
 .step1 {
@@ -186,3 +197,26 @@ nav img{
 .step3 p{
     color: white;
 }
+
+.stepButton{
+    background: rgb(226, 84, 84);
+    color: white;
+    border-radius: 200px;
+    border-color: transparent;
+    display: inline-block;
+    text-align: center;
+    width: 4%;
+}
+
+.stepP{
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    margin-left: 1%;
+}
+.SubPage{
+    background:#03396c;
+    border-radius: 15px;
+}
+
+

@@ -17,6 +17,11 @@ UPLOAD_FOLDER = 'image_folders/'
 IMAGE_FOLDER = UPLOAD_FOLDER + random_key
 TXT_FILE = random_key + ".txt"
 
+if os.path.exists(IMAGE_FOLDER):
+    new_random_key = ''.join(random.choice(string.ascii_letters) for i in range(8)) 
+    IMAGE_FOLDER = UPLOAD_FOLDER + new_random_key
+    TXT_FILE = new_random_key + ".txt"
+
 
 @app.route('/')
 def hello():
@@ -25,6 +30,10 @@ def hello():
 @app.route('/submit.html')
 def submit():
     return render_template("submit.html")
+
+@app.route('/submit2.html')
+def submit2():
+    return render_template("submit2.html")
 
 @app.route('/instructions.html')
 def dello():
@@ -74,7 +83,6 @@ def Attendance(name):
             date = datetime.now().strftime('%H:%M:%S')
             f.write(f'\n{name},{date}')
 
-
 def startRecognition():
     #0 for starting 
     if os.path.exists(IMAGE_FOLDER):
@@ -115,3 +123,4 @@ def startRecognition():
 @app.route('/video_feed')
 def video_feed():
     return Response(startRecognition(), mimetype='multipart/x-mixed-replace; boundary=frame')
+

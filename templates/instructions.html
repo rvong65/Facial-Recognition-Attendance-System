@@ -4,35 +4,53 @@
         <meta charset="UTF-8">
         <meta name = "viewport" content="width=device-width" initial-scale=1.0>
         <link rel="stylesheet" href="static/styles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
         <title> Instructions </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     </head>
 
     <body>
-        <section class="step1"> 
+        <section class="top">
+            <nav>
+                <div class = "links">
+                    <ul>
+                    <li><a href="/">Home</a></li> 
+                    <li><a href="instructions.html">Instructions</a></li> 
+                    </ul>
+                </div>
+            </nav>
+         </section>   
+        <section class="container step1 p-2"> 
             <h2>Step 1</h2>
             <p>Create a folder with the images of faces. Be sure to name each image with the name of the person like this: Chris Evans.  Click on the Choose file button 
                 and select all the images using your mouse cursor. Click on submit when you are done. 
             </p>
-            <br><img src="static/UploadFile.png"><br>
-            <img src="static/UploadFile2.png" width=350px > 
+            <div class="row p-2 justify-content-center">
+                <div class="col"> 
+                   <img src="static/UploadFile.jpg" width=700px>
+                </div>
+                <div class="col"> 
+                    <img src="static/UploadFile2.png" width=350px>
+                </div>
+            </div>
         </section>
-        <hr>
-        <section class="step2">
+        <section class="container step2 p-2">
             <h2>Step 2</h2>
             <p>This step requires a webcam in order to recognize the faces. Adjust the webcam in a way in which it will be able to see the faces of people. 
                 When a face is detected, it will output a box with their name like in this picture: 
             </p>
-            <img src= "static/Capture.png">
+            <img src= "static/Capture.jpg">
         </section>
-        <hr>
-        <section class="step3">
+        <section class="container step3 p-2">
             <h2>Step 3</h2>
             <p>When you are finished, click the download button and you will receive a text file with the names and times of those recorded along with the names of those who are absent.</p>
-            <br><img src= "static/Download.png"><br>
-            <img src= "static/MarkAttendance.png" width=600px>
+            <div class="row justify-content-center">
+                <div class="col ml-3 text-center">
+                    <img src= "static/Download.jpg" width=400px>
+                </div>
+                <div class="col">
+                    <img src= "static/MarkAttendance.png" width=500px>
+                </div>    
+            </div>
         </section>
     </body>
 </html>
