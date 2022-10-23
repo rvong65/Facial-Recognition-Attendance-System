@@ -12,3 +12,7 @@ Clone the repository:
 To install all dependencies run:
 
 ```pip install -r requirements.txt```
+
+To run this on your local machine:
+
+```flask run```
