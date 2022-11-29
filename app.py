@@ -17,6 +17,7 @@ UPLOAD_FOLDER = 'image_folders/'
 IMAGE_FOLDER = UPLOAD_FOLDER + random_key
 TXT_FILE = random_key + ".txt"
 
+#Create new image folder and attendance file
 if os.path.exists(IMAGE_FOLDER):
     new_random_key = ''.join(random.choice(string.ascii_letters) for i in range(8)) 
     IMAGE_FOLDER = UPLOAD_FOLDER + new_random_key
@@ -39,6 +40,7 @@ def submit2():
 def dello():
     return render_template("instructions.html")
 
+#Upload image files
 @app.route('/submit.html', methods=['POST'])
 def upload_file():
     if(request.method == "POST"):
@@ -50,6 +52,7 @@ def upload_file():
                 file.save(os.path.join(IMAGE_FOLDER, filename))
     return redirect(url_for('submit'))
 
+#Download attendance file
 @app.route('/download')
 def download():
     path = os.path.join("attendance", TXT_FILE)
@@ -66,14 +69,14 @@ def download():
     return send_file(path, as_attachment=True)
 
         
-
+#Create attendance file
 def createFile():
     if not os.path.exists(os.path.join("attendance", TXT_FILE)):
         with open(os.path.join("attendance", TXT_FILE), 'w') as file:
             file.write('ATTENDANCE FOR ' + str(datetime.now().strftime('%m/%d/%Y')) + "\n")
 
+#Record those that were present
 def Attendance(name):
-    #create file
     with open(os.path.join("attendance", TXT_FILE),'r+') as f:
         listOfNames = []
         for line in f.readlines():
@@ -83,6 +86,7 @@ def Attendance(name):
             date = datetime.now().strftime('%H:%M:%S')
             f.write(f'\n{name},{date}')
 
+#Start the recognition process
 def startRecognition():
     #0 for starting 
     if os.path.exists(IMAGE_FOLDER):
@@ -94,7 +98,6 @@ def startRecognition():
     cap = cv2.VideoCapture(0)
     if len(os.listdir(IMAGE_FOLDER)) != 0:
         while True: 
-                #ret returns True or False if webcam is on
                 ret, image = cap.read()
                 newImage = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
                 live_face_location = fr.face_locations(newImage)
