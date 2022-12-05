@@ -5,6 +5,7 @@ An attendance system built using HTML, CSS, Flask, and the face_recognition libr
 ## Main Interface Page
 ![image](https://user-images.githubusercontent.com/87782709/195669963-a5151ef1-6ac1-437d-9393-e0fc14b7b4e8.png)
 
+## Setup
 Clone the repository: 
 
 ```git clone https://github.com/rvong65/Facial-Recognition-Attendance-System.git```
