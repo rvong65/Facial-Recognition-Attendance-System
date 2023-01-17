@@ -1,4 +1,4 @@
-# 👤 Facial-Recognition-Attendance-System
+# 👤 Facial Recognition Attendance System
 A facial-recognition attendance system built using HTML, CSS, Flask, and the face_recognition library in Python
 ## Front Page
 ![image](https://user-images.githubusercontent.com/87782709/195667456-567a70f9-264a-42a9-b3bc-5e09e2bec487.png)
