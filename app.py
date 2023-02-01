@@ -25,7 +25,7 @@ if os.path.exists(IMAGE_FOLDER):
 
 
 @app.route('/')
-def hello():
+def home():
     return render_template("index.html")
 
 @app.route('/submit.html')
@@ -37,7 +37,7 @@ def submit2():
     return render_template("submit2.html")
 
 @app.route('/instructions.html')
-def dello():
+def instructions():
     return render_template("instructions.html")
 
 #Upload image files
